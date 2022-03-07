@@ -179,10 +179,10 @@ determine the exact padding."
    ((markdown-code-face &override) :background base3)
 
    ;; org-mode
-   ;; (org-block                    :background base1 :extend t)
-   ;; (org-block-background         :background base1 :extend t)
-   ;; (org-meta-line                :inherit 'shadow)
-   ;; (org-block-begin-line         :foreground comments :background base1 :extend t)
+   (org-block                    :background base3 :extend t)
+   (org-block-background         :background base3 :extend t)
+   (org-meta-line                :inherit 'shadow)
+   (org-block-begin-line         :foreground comments :background base3 :extend t)
 
    (org-document-info :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.0) :weight doom-nord-plus-variable-font-weight :foreground blue)
    (org-document-title :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.5) :weight doom-nord-plus-variable-font-weight :foreground blue)
@@ -195,22 +195,22 @@ determine the exact padding."
    (org-level-7 :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.0)  :weight doom-nord-plus-variable-font-weight :foreground yellow)
    (org-level-8 :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.0)  :weight doom-nord-plus-variable-font-weight :foreground orange)
 
-   ;; (+org-todo-project :inherit '(bold org-todo) :foreground teal)
+   (+org-todo-project :inherit '(bold org-todo) :foreground teal)
    ;; (org-hide :foreground hidden)
    ;; (solaire-org-hide-face :foreground hidden-alt)
 
    ;; org-agenda
    (org-date :foreground base6)
-   ;; (org-agenda-structure :foreground highlight)
-   ;; (org-super-agenda-header :inherit 'variable-pitch :weight doom-nebula-variable-font-weight :height (* doom-nebula-variable-font-height-multiplier 1.2) :foreground dark-cyan)
-   ;; (org-agenda-date :foreground violet)
-   ;; (org-agenda-date-weekend :foreground magenta)
-   ;; (org-agenda-date-today :foreground base8 :underline t :weight 'bold)
-   ;; (org-scheduled :foreground comments)
-   ;; (org-scheduled-today :foreground fg)
-   ;; (org-warning :foreground cyan)
-   ;; (org-scheduled-previously :foreground cyan)
-   ;; (org-upcoming-deadline :foreground cyan)
+   (org-agenda-structure :foreground highlight)
+   (org-super-agenda-header :inherit 'variable-pitch :weight doom-nord-plus-variable-font-weight :height (* doom-nord-plus-variable-font-height-multiplier 1.2) :foreground dark-cyan)
+   (org-agenda-date :foreground violet)
+   (org-agenda-date-weekend :foreground magenta)
+   (org-agenda-date-today :foreground base8 :underline t :weight 'bold)
+   (org-scheduled :foreground comments)
+   (org-scheduled-today :foreground fg)
+   (org-warning :foreground cyan)
+   (org-scheduled-previously :foreground cyan)
+   (org-upcoming-deadline :foreground cyan)
 
    ;;;; mic-paren
    ((paren-face-match &override) :foreground bg :background teal :weight 'ultra-bold)
