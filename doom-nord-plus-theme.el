@@ -202,7 +202,7 @@ determine the exact padding."
    ;; org-agenda
    (org-date :foreground base6)
    (org-agenda-structure :foreground highlight)
-   (org-super-agenda-header :inherit 'variable-pitch :weight doom-nord-plus-variable-font-weight :height (* doom-nord-plus-variable-font-height-multiplier 1.2) :foreground dark-cyan)
+   (org-super-agenda-header :inherit 'variable-pitch :weight doom-nord-plus-variable-font-weight :height (* doom-nord-plus-variable-font-height-multiplier 1.2) :foreground teal)
    (org-agenda-date :foreground violet)
    (org-agenda-date-weekend :foreground magenta)
    (org-agenda-date-today :foreground base8 :underline t :weight 'bold)
