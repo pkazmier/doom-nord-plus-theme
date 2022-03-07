@@ -55,7 +55,8 @@ determine the exact padding."
    (base0      '("#191C25" "black"   "black"        ))
    (base1      '("#242832" "#1e1e1e" "brightblack"  ))
    (base2      '("#2C333F" "#2e2e2e" "brightblack"  ))
-   (base3      '("#373E4C" "#262626" "brightblack"  ))
+   ;; (base3      '("#373E4C" "#262626" "brightblack"  ))
+   (base3      '("#3B4252" "#262626" "brightblack"  )) ;; Nord1
    (base4      '("#434C5E" "#3f3f3f" "brightblack"  )) ;; Nord2
    (base5      '("#4C566A" "#525252" "brightblack"  )) ;; Nord3
    (base6      '("#9099AB" "#6b6b6b" "brightblack"  ))
@@ -79,12 +80,12 @@ determine the exact padding."
 
    ;; face categories -- required for all themes
    (highlight      blue)
-   (vertical-bar   (doom-darken base1 0.2))
+   (vertical-bar   base5)
    (selection      dark-blue)
    (builtin        blue)
    (comments       (if doom-nord-plus-brighter-comments dark-cyan (doom-lighten base5 0.2)))
    (doc-comments   (doom-lighten (if doom-nord-plus-brighter-comments dark-cyan base5) 0.25))
-   (constants      blue)
+   (constants      teal)
    (functions      cyan)
    (keywords       blue)
    (methods        cyan)
@@ -118,17 +119,15 @@ determine the exact padding."
    (modeline-fg     nil)
    (modeline-fg-alt base6)
 
-   (modeline-bg
-    (if -modeline-bright
-        (doom-blend bg base5 0.2)
-      `(,(doom-darken (car bg) 0.1) ,@(cdr base2))))
-   (modeline-bg-l
-    (if -modeline-bright
-        (doom-blend bg base5 0.2)
-      base1))
-   (modeline-bg-inactive   `(,(doom-darken (car bg) 0.1)   ,@(cdr base2)))
-   (modeline-bg-inactive-l `(,(doom-darken (car bg) 0.025) ,@(cdr base2))))
+   ;; Active modeline background should be consistent regardless of solaire mode
+   ;; or not, so it is easily identified as the active modeline.
+   (modeline-bg  (if doom-nord-plus-brighter-modeline base4 base3))
+   (modeline-bg-l (if doom-nord-plus-brighter-modeline base4 base3))
 
+   ;; Inactive modeline background should match the background of window so
+   ;; there is no noticeable modeline.
+   (modeline-bg-inactive   (cons (car bg-alt) (cdr base2)))
+   (modeline-bg-inactive-l (cons (car bg) (cdr base2))))
 
   ;;;; Base theme face overrides
   ((fringe :foreground teal)
@@ -169,14 +168,14 @@ determine the exact padding."
    (markdown-list-face :foreground blue)
    (markdown-markup-face :foreground base5)
    (markdown-header-delimiter-face :inherit 'variable-pitch :foreground comments)
-   (markdown-header-face-1 :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.5) :weight doom-nord-plus-variable-font-weight :foreground blue)
-   (markdown-header-face-2 :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.33) :weight doom-nord-plus-variable-font-weight :foreground dark-cyan)
-   (markdown-header-face-3 :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.27) :weight doom-nord-plus-variable-font-weight :foreground teal)
-   (markdown-header-face-4 :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.21) :weight doom-nord-plus-variable-font-weight :foreground violet)
+   (markdown-header-face-1 :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.5) :weight doom-nord-plus-variable-font-weight :foreground dark-blue)
+   (markdown-header-face-2 :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.33) :weight doom-nord-plus-variable-font-weight :foreground blue)
+   (markdown-header-face-3 :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.27) :weight doom-nord-plus-variable-font-weight :foreground cyan)
+   (markdown-header-face-4 :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.21) :weight doom-nord-plus-variable-font-weight :foreground teal)
    (markdown-header-face-5 :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.15) :weight doom-nord-plus-variable-font-weight :foreground magenta)
-   (markdown-header-face-6 :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.1)  :weight doom-nord-plus-variable-font-weight :foreground cyan)
-   (markdown-header-face-7 :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.0)  :weight doom-nord-plus-variable-font-weight :foreground green)
-   (markdown-header-face-8 :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.0)  :weight doom-nord-plus-variable-font-weight :foreground yellow)
+   (markdown-header-face-6 :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.1)  :weight doom-nord-plus-variable-font-weight :foreground green)
+   (markdown-header-face-7 :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.0)  :weight doom-nord-plus-variable-font-weight :foreground yellow)
+   (markdown-header-face-8 :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.0)  :weight doom-nord-plus-variable-font-weight :foreground orange)
    ((markdown-code-face &override) :background base3)
 
    ;; org-mode
