@@ -193,7 +193,10 @@ determine the exact padding."
 
    ;; mu4e
    (mu4e-highlight-face :foreground cyan :weight 'bold)
-   ;; (mu4e-header-highlight-face :background (doom-darken dark-blue 0.2) :foreground (doom-lighten cyan   0.3) :weight 'bold)
+   (mu4e-unread-face :foreground blue :weight 'normal)
+   (mu4e-replied-face :foreground teal :weight 'normal)
+   (mu4e-header-face :foreground base7 :weight 'normal)
+   (mu4e-header-highlight-face :background base4 :foreground cyan :weight 'normal)
 
    ;; org-mode
    (org-block                    :background base3 :extend t)
