@@ -196,7 +196,7 @@ determine the exact padding."
    (mu4e-unread-face :foreground blue :weight 'normal)
    (mu4e-replied-face :foreground teal :weight 'normal)
    (mu4e-header-face :foreground base7 :weight 'normal)
-   (mu4e-header-highlight-face :background base4 :foreground cyan :weight 'normal)
+   (mu4e-header-highlight-face :background base4 :foreground cyan :weight 'bold)
 
    ;; org-mode
    (org-block                    :background base3 :extend t)
