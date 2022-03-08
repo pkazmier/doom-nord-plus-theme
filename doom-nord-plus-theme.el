@@ -164,6 +164,19 @@ determine the exact padding."
    (highlight-thing :background (doom-lighten base4 0.1) :distant-foreground fg-alt)
    ;;;; ivy
    ((ivy-current-match &override) :foreground region-fg :weight 'semi-bold)
+
+   ;; helpful
+   (helpful-heading :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.20) :weight doom-nord-plus-variable-font-weight :foreground cyan)
+
+   ;; links & info
+   (link-visited :foreground comments)
+   (info-menu-star :foreground magenta)
+   (info-menu-header :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.20) :weight doom-nord-plus-variable-font-weight :foreground cyan)
+   (info-title-1 :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.33) :weight doom-nord-plus-variable-font-weight :foreground dark-blue)
+   (info-title-2 :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.27) :weight doom-nord-plus-variable-font-weight :foreground blue)
+   (info-title-3 :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.21) :weight doom-nord-plus-variable-font-weight :foreground cyan)
+   (info-title-4 :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.15) :weight doom-nord-plus-variable-font-weight :foreground teal)
+
    ;;;; markdown-mode
    (markdown-list-face :foreground blue)
    (markdown-markup-face :foreground base5)
@@ -177,6 +190,10 @@ determine the exact padding."
    (markdown-header-face-7 :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.0)  :weight doom-nord-plus-variable-font-weight :foreground yellow)
    (markdown-header-face-8 :inherit 'variable-pitch :height (* doom-nord-plus-variable-font-height-multiplier 1.0)  :weight doom-nord-plus-variable-font-weight :foreground orange)
    ((markdown-code-face &override) :background base3)
+
+   ;; mu4e
+   (mu4e-highlight-face :foreground cyan :weight 'bold)
+   ;; (mu4e-header-highlight-face :background (doom-darken dark-blue 0.2) :foreground (doom-lighten cyan   0.3) :weight 'bold)
 
    ;; org-mode
    (org-block                    :background base3 :extend t)
