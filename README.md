@@ -15,7 +15,7 @@ Copy the `doom-nord-plus-theme.el` and `nord-winter.png` file into your
 
 ;; Theme settings
 (setq doom-theme 'doom-nord-plus
-      fancy-splash-image (concat doom-private-dir "themes/nebula.png"))
+      fancy-splash-image (concat doom-private-dir "themes/nord-winter.png"))
 
 ```
 
